@@ -2,11 +2,11 @@
                 Few-shot Image Generation via Adaptation-Aware <br> Kernel Modulation</h1>
 <p align='center' style="text-align:center;font-size:1.25em;">
     <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Yunqing Zhao<sup>1</sup></a>&nbsp;/&nbsp;
-    <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Chao Du<sup>2</sup></a>&nbsp;/&nbsp;
+    <a href="https://duchao0726.github.io/" target="_blank" style="text-decoration: none;">Chao Du<sup>2</sup></a>&nbsp;/&nbsp;
     <a href="https://miladabd.github.io/" target="_blank" style="text-decoration: none;">Milad Abdollahzadeh<sup>1</sup></a>&nbsp;/&nbsp;
-    <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Tianyu Pang<sup>2</sup></a></br>
-    <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Min Lin<sup>2</sup></a>&nbsp;/&nbsp;
-    <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Shuicheng Yan<sup>2</sup></a>&nbsp;/&nbsp;
+    <a href="https://p2333.github.io/" target="_blank" style="text-decoration: none;">Tianyu Pang<sup>2</sup></a></br>
+    <a href="https://linmin.me/" target="_blank" style="text-decoration: none;">Min Lin<sup>2</sup></a>&nbsp;/&nbsp;
+    <a href="https://yanshuicheng.ai/" target="_blank" style="text-decoration: none;">Shuicheng Yan<sup>2</sup></a>&nbsp;/&nbsp;
     <a href="https://sites.google.com/site/mancheung0407/" target="_blank" style="text-decoration: none;">Ngai&#8209;Man Cheung<sup>1</sup></a></br>
 <sup>1</sup>Singapore University of Technology and Design (SUTD)&emsp;&emsp; <sup>2</sup>Sea AI Lab<br/>
 </p>
@@ -14,7 +14,7 @@
 <p align='center';>
 <b>
 <em>The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2023;</em> <br>
-<em>Vancouver Convention Center,Vancouver, BC, Canada.</em>
+<em>Vancouver Convention Center, Vancouver, British Columbia, Canada.</em>
 </b>
 </p>
 
