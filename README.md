@@ -1,5 +1,5 @@
 <h1 align='center' style="text-align:center; font-weight:bold; font-size:2.0em;letter-spacing:2.0px;">
-                Few-shot Image Generation via Adaptation-Aware <br> Kernel Modulation</h1>
+                Exploring Incompatible Knowledge Transfer<br>in Few-shot Image Generation</h1>
 <p align='center' style="text-align:center;font-size:1.25em;">
     <a href="https://scholar.google.com/citations?user=kQA0x9UAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Yunqing Zhao<sup>1</sup></a>&nbsp;/&nbsp;
     <a href="https://duchao0726.github.io/" target="_blank" style="text-decoration: none;">Chao Du<sup>2</sup></a>&nbsp;/&nbsp;
