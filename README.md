@@ -20,7 +20,7 @@
 
 <p align='center' style="text-align:center;font-size:2.5 em;">
 <b>
-    <a href="https://github.com/yunqing-me/RICK" target="_blank" style="text-decoration: none;">Project Page</a>&nbsp;/&nbsp;
+    <a href="https://yunqing-me.github.io/RICK/" target="_blank" style="text-decoration: none;">Project Page</a>&nbsp;/&nbsp;
     <a href="https://github.com/yunqing-me/RICK" target="_blank" style="text-decoration: none;">Poster</a>&nbsp;/&nbsp;
     <a href="https://github.com/yunqing-me/RICK" target="_blank" style="text-decoration: none;">Slides</a>&nbsp;/&nbsp;
     <a href="https://github.com/yunqing-me/RICK" target="_blank" style="text-decoration: none;">Paper</a>&nbsp;
