@@ -8,7 +8,7 @@
     <a href="https://linmin.me/" target="_blank" style="text-decoration: none;">Min Lin<sup>2</sup></a>&nbsp;/&nbsp;
     <a href="https://yanshuicheng.ai/" target="_blank" style="text-decoration: none;">Shuicheng Yan<sup>2</sup></a>&nbsp;/&nbsp;
     <a href="https://sites.google.com/site/mancheung0407/" target="_blank" style="text-decoration: none;">Ngai&#8209;Man Cheung<sup>1</sup></a></br>
-<sup>1</sup>Singapore University of Technology and Design (SUTD)&emsp;&emsp; <sup>2</sup>Sea AI Lab<br/>
+<sup>1</sup>Singapore University of Technology and Design (SUTD)&emsp;<sup>2</sup>Sea AI Lab (SAIL), Singapore<br/>
 </p>
 
 <p align='center';>
@@ -21,26 +21,18 @@
 <p align='center' style="text-align:center;font-size:2.5 em;">
 <b>
     <a href="https://yunqing-me.github.io/RICK/" target="_blank" style="text-decoration: none;">Project Page</a>&nbsp;/&nbsp;
-    <a href="https://github.com/yunqing-me/RICK" target="_blank" style="text-decoration: none;">Poster</a>&nbsp;/&nbsp;
-    <a href="https://github.com/yunqing-me/RICK" target="_blank" style="text-decoration: none;">Slides</a>&nbsp;/&nbsp;
-    <a href="https://github.com/yunqing-me/RICK" target="_blank" style="text-decoration: none;">Paper</a>&nbsp;
+    <a href="https://cvpr2023.thecvf.com/media/PosterPDFs/CVPR%202023/23031.png?t=1685376860.4000738" target="_blank" style="text-decoration: none;">Poster</a>&nbsp;/&nbsp;
+    <a href="https://cvpr2023.thecvf.com/media/PosterPDFs/CVPR%202023/23031.png?t=1685376860.4000738" target="_blank" style="text-decoration: none;">Slides</a>&nbsp;/&nbsp;
+    <a href="https://arxiv.org/abs/2304.07574" target="_blank" style="text-decoration: none;">Paper</a>&nbsp;
     <!-- /&nbsp; -->
     <!-- <a href="https://recorder-v3.slideslive.com/?share=74947&s=c88e53c5-a3c2-46c9-9719-092b74eca0c2" target="_blank" style="text-decoration: none;">Talk</a>&nbsp; -->
 </b>
 </p>
 
 
-<!-- ---------------------------------------------------------------------- -->
-
-<!-- #### TL, DR: 
-```
-In this research, we propose Adaptation-Aware Kernel Modulation (AdAM) for few-shot image generation, that aims to identify kernels in source GAN important for target adaptation. 
-
-The model can perform GAN adaptation using very few samples from target domains with different proximity to the source.
-``` -->
 Code/Project Page will be actively updated
 
-# Installation and Environment:
+# Installation:
 - Platform: Linux
 - NVIDIA A100 PCIe 40GB, CuDNN 11.4
 - lmdb, tqdm, wandb
@@ -99,12 +91,12 @@ Download the GAN model pretrained on FFHQ from [here](https://drive.google.com/f
 If you find this project useful in your research, please consider citing our paper:
 
 ```
-@InProceedings{zhao2023fsig,
-   author    = {Zhao, Yunqing and Du, Chao and Abdollahzadeh, Milad and Pang, Tianyu and Lin, Min and YAN, Shuicheng and Cheung, Ngai-Man},
-    title     = {Exploring Incompatible Knowledge Transfer in Few-shot Image Generation},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2023},
+@inproceedings{zhao2023exploring,
+  title={Exploring incompatible knowledge transfer in few-shot image generation},
+  author={Zhao, Yunqing and Du, Chao and Abdollahzadeh, Milad and Pang, Tianyu and Lin, Min and Yan, Shuicheng and Cheung, Ngai-Man},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7380--7391},
+  year={2023}
 }
 ```
 
