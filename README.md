@@ -92,14 +92,25 @@ If you find this project useful in your research, please consider citing our pap
 
 ```
 @inproceedings{zhao2023exploring,
-  title={Exploring incompatible knowledge transfer in few-shot image generation},
-  author={Zhao, Yunqing and Du, Chao and Abdollahzadeh, Milad and Pang, Tianyu and Lin, Min and Yan, Shuicheng and Cheung, Ngai-Man},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={7380--7391},
-  year={2023}
+    title={Exploring incompatible knowledge transfer in few-shot image generation},
+    author={Zhao, Yunqing and Du, Chao and Abdollahzadeh, Milad and Pang, Tianyu and Lin, Min and Yan, Shuicheng and Cheung, Ngai-Man},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    pages={7380--7391},
+    year={2023}
 }
 ```
+Meanwhile, we also demonstrate a relevant research for few-shot image generation, via parameter-efficient and Adaptation-Aware kernel Modulation ([AdAM](https://github.com/yunqing-me/AdAM)) to fine-tune the pretrained models:
 
+```
+@inproceedings{zhao2022fewshot,
+    title={Few-shot Image Generation via Adaptation-Aware Kernel Modulation},
+    author={Yunqing Zhao and Keshigeyan Chandrasegaran and Milad Abdollahzadeh and Ngai-man Cheung},
+    booktitle={Advances in Neural Information Processing Systems},
+    editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+    year={2022},
+    url={https://openreview.net/forum?id=Z5SE9PiAO4t}
+}
+```
 # Acknowledgement: 
 
 We appreciate the wonderful base implementation of StyleGAN-V2 from [@rosinality](https://github.com/rosinality). We thank [@mseitzer](https://github.com/mseitzer/pytorch-fid), [@Ojha](https://github.com/utkarshojha/few-shot-gan-adaptation) and [@richzhang](https://github.com/richzhang/PerceptualSimilarity) for their implementations on FID score and intra-LPIPS.
