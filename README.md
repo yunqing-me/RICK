@@ -22,7 +22,7 @@
 <b>
     <a href="https://yunqing-me.github.io/RICK/" target="_blank" style="text-decoration: none;">Project Page</a>&nbsp;/&nbsp;
     <a href="https://cvpr2023.thecvf.com/media/PosterPDFs/CVPR%202023/23031.png?t=1685376860.4000738" target="_blank" style="text-decoration: none;">Poster</a>&nbsp;/&nbsp;
-    <a href="https://cvpr2023.thecvf.com/media/PosterPDFs/CVPR%202023/23031.png?t=1685376860.4000738" target="_blank" style="text-decoration: none;">Slides</a>&nbsp;/&nbsp;
+    <a href="https://cvpr2023.thecvf.com/media/cvpr-2023/Slides/23031_t6s1F8r.pdf" target="_blank" style="text-decoration: none;">Slides</a>&nbsp;/&nbsp;
     <a href="https://arxiv.org/abs/2304.07574" target="_blank" style="text-decoration: none;">Paper</a>&nbsp;
     <!-- /&nbsp; -->
     <!-- <a href="https://recorder-v3.slideslive.com/?share=74947&s=c88e53c5-a3c2-46c9-9719-092b74eca0c2" target="_blank" style="text-decoration: none;">Talk</a>&nbsp; -->
