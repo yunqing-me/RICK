@@ -364,14 +364,14 @@
     <!-- / Animation. -->
 
 
-    <!-- Concurrent Work. -->
+    <!-- Overview -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Overview of Proposed method</h2>
+        <h2 class="title is-3">Overview</h2>
 
         <div class="content has-text-justified">
 			<center>
-				<table align=center width=850px>
+				<table align=center width=880px>
 					<tr>
 						<td width=260px>
 							<center>
@@ -384,7 +384,7 @@
 					<tr>
 						<td>
 							<p style="text-align:justify; text-justify:inter-ideograph;">
-							<b> Contributions:</b> <br> <br>
+                <h4 class="title is-5">Contributions</h4>
 							<b>1: </b>
 							We consider the problem of FSIG with Transfer Learning using very limited target samples (e.g., 10-shot). <br>
 							<b>2: </b>
@@ -395,9 +395,19 @@
 								<li>We propose knowledge truncation to alleviate incompatible knowledge transfer, and realize it with a lightweight filter-pruning based method. </li>
 							</ul>
 							<b>3: </b>
-							Schematic diagram of the proposed Removing In-Compatible Knowledge (RICK): 
-							We measure the importance of each filter during adaptation, periodically (e.g., every 50 iterations). 
-							We zero out the filters with least importance. The same operations are applied to discriminator. Similar to state-of-the-art knowledge preservation methods, we also preserve the filters with highest importance, and fine-tuning the others.
+							Below is the schematic diagram of the proposed Removing In-Compatible Knowledge (RICK) for FSIG: 
+							We measure the importance of each filter for adaptation, during adaptation, periodically (e.g., every 50 iterations). 
+							We zero out (i.e., "remove") the filters with least importance. The same operations are applied to the discriminator. 
+              Similar to state-of-the-art knowledge preservation methods, we also preserve the filters with highest importance, and fine-tuning the others.
+						</td>
+					</tr>
+				</table>
+				<table align=center width=880px>
+					<tr>
+						<td width=260px>
+							<center>
+								<img class="round" style="width:880px" src="./resources/method.jpg"/>
+							</center>
 						</td>
 					</tr>
 				</table>
@@ -405,8 +415,53 @@
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+    <!--/ Overview -->
 
+    <!-- Experiment-->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiment Results</h2>
+
+        <div class="content has-text-justified">
+			<center>
+				<table align=center width=880px>
+					<tr>
+						<td width=260px>
+							<center>
+								<img class="round" style="width:880px" src="./resources/babies_compare.jpg"/>
+							</center>
+							<center>
+								<img class="round" style="width:880px" src="./resources/cats_compare.jpg"/>
+							</center>
+						</td>
+					</tr>
+				</table>
+        <table align=center width=850px>
+          <center>
+            <tr>
+              <td>
+                <p style="text-align:justify; text-justify:inter-ideograph;"> Experiment results of FSIG on few-shot target samples. FFHQ is the source domain. 
+                              <b>Left</b>:
+                              10-shot real target samples for adaptation.
+                              <b>Mid</b>: We visualize the generated images using the adapted generator with different methods. Images in each column are from the same noise input. 
+                              It is noticeable that our method while preserving the source knowledge useful for the target domain, 
+                              reliably removes the incompatible source knowledge. 
+                              For example, in SOTA methods,
+                              (<b>Top</b> orange frames) hat, doodle, sunglasses and beard are transferred and lead to generated babies with degraded realism; 
+                              (<b>Bottom</b>  blue frames) hat, glasses, human face texture and artifacts are transferred and lead to generated cats with low realism. 
+                              In contrast, our method can address this issue in different setups.
+                              <b>Right</b>:
+                              Quantitatively, we measure the quality and diversity of generated images via FID and intra-LPIPS.. 
+              </td>
+            </tr>
+          </center>
+        </table>
+			</center>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview -->
+    
   </div>
 </section>
 
@@ -414,6 +469,9 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
+    <p>
+        If you find our research useful in your work, please consider citing our paper:  
+    </p>
     <pre><code>@inproceedings{zhao2023exploring,
 		title={Exploring incompatible knowledge transfer in few-shot image generation},
 		author={Zhao, Yunqing and Du, Chao and Abdollahzadeh, Milad and Pang, Tianyu and Lin, Min and Yan, Shuicheng and Cheung, Ngai-Man},
@@ -423,7 +481,7 @@
 	}</code></pre>
           <div class="content has-text-justified">
             <p>
-				Meanwhile, we also demonstrate a relevant research for few-shot image generation, via parameter-efficient Adaptation-Aware kernel Modulation (<a href="https://yunqing-me.github.io/AdAM/">AdAM</a>) to fine-tune the pretrained models: </a>
+				Meanwhile, we also demonstrate a relevant research for few-shot image generation, via parameter-efficient Adaptation-Aware kernel Modulation (<a href="https://yunqing-me.github.io/AdAM/">AdAM</a>) to fine-tune the pretrained GANs: </a>
             </p>
             <pre><code>@inproceedings{zhao2022fewshot,
 				title={Few-shot Image Generation via Adaptation-Aware Kernel Modulation},
