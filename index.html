@@ -1,376 +1,471 @@
-<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
-<script type="text/javascript">google.load("jquery", "1.3.2");</script>
-
-<style type="text/css">
-	body {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-		font-weight:300;
-		font-size:18px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 1100px;
-	}
-	
-	h1 {
-		font-size:32px;
-		font-weight:300;
-	}
-	
-	.disclaimerbox {
-		background-color: #eee;		
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-		padding: 20px;
-	}
-
-	video.header-vid {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	
-	img.header-img {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	
-	img.rounded {
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	
-	a:link,a:visited
-	{
-		color: #1367a7;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #208799;
-	}
-	
-	td.dl-link {
-		height: 160px;
-		text-align: center;
-		font-size: 22px;
-	}
-	
-	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		5px 5px 0 0px #fff, /* The second layer */
-		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		10px 10px 0 0px #fff, /* The third layer */
-		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-		15px 15px 0 0px #fff, /* The fourth layer */
-		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-		20px 20px 0 0px #fff, /* The fifth layer */
-		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-		25px 25px 0 0px #fff, /* The fifth layer */
-		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
-
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-
-	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		5px 5px 0 0px #fff, /* The second layer */
-		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		10px 10px 0 0px #fff, /* The third layer */
-		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
-		margin-top: 5px;
-		margin-left: 10px;
-		margin-right: 30px;
-		margin-bottom: 5px;
-	}
-	
-	.vert-cent {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	
-	hr
-	{
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-	}
-</style>
-
+<!DOCTYPE html>
 <html>
 <head>
-	<title>FSIG-RICK</title>
-	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Creative and Descriptive Paper Title." />
-	<meta property="og:description" content="Paper description." />
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>On Evaluating Adversarial Robustnesss of Large Vision-Language Models</title>
 
-	<!-- Get from Google Analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src=""></script> 
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-		gtag('config', 'UA-75863369-6');
-	</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
-
 <body>
-	<br>
-	<center>
-		<span style="font-size:36px">Exploring Incompatible Knowledge Transfer <br>in Few-shot Image Generation</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
-				<tr>
-					<td align=center width=160px>
-						<center>
-							<span style="font-size:20px"><a href="https://yunqing-me.github.io/">Yunqing Zhao</a></span>
-						</center>
-					</td>
-					<td align=center width=160px>
-						<center>
-							<span style="font-size:20px"><a href="https://duchao0726.github.io/">Chao Du</a></span>
-						</center>
-					</td>
-					<td align=center width=200px>
-						<center>
-							<span style="font-size:20px"><a href="https://miladabd.github.io/">Milad Abdollahzadeh</a></span>
-						</center>
-					</td>
-					<td align=center width=160px>
-						<center>
-							<span style="font-size:20px"><a href="https://p2333.github.io/">Tianyu Pang</a></span>
-						</center>
-					</td>
-                    </tr>
-                </table>
-                <table align=center width=500px>
-					<td align=center width=160px>
-						<center>
-							<span style="font-size:20px"><a href="https://linmin.me/">Min Lin</a></span>
-						</center>
-					</td>
-					<td align=center width=150px>
-						<center>
-							<span style="font-size:20px"><a href="https://yanshuicheng.ai/">Shuicheng Yan</a></span>
-						</center>
-					</td>
-					<td align=center width=200px>
-						<center>
-							<span style="font-size:20px"><a href="https://sites.google.com/site/mancheung0407/">Ngai-Man Cheung</a></span>
-						</center>
-					</td>
-				</tr>
-			</table>
-			<table align=center width=580px>
-				<tr>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
-						</center>
-					</td>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href='https://github.com/yunqing-me/RICK'>[GitHub]</a></span><br>
-						</center>
-					</td>
-					<td align=center width=250px>
-						<center>
-							<span style="font-size:24px"><a href=''>[Data Repository]</a></span><br>
-						</center>
-					</td>
-				</tr>
-			</table>
-		</table>
-	</center>
 
-	<center>
-		<table align=center width=850px>
-			<tr>
-				<td width=260px>
-					<center>
-						<img class="round" style="width:880px" src="./resources/teaser.jpg"/>
-					</center>
-				</td>
-			</tr>
-		</table>
-		<table align=center width=880px>
-			<tr>
-				<td>
-					<p style="text-align:justify; text-justify:inter-ideograph;">
-					<b> Overview and our contributions.</b> <br>
-					<b>- 1: </b>
-					We consider the problem of FSIG with Transfer Learning using very limited target samples (e.g., 10-shot). <br>
-					<b>- 2: </b>
-					Our work makes two contributions: 
-					<ul>
-						<li>We explore the incompatible knowledge transfer for FSIG, reveal that SOTA methods fail in handling this issue, investigate the underlying causation, and 
-                            disclose the inadequacy of fine-tuning in removal of incompatible knowledge.</li>
-						<li>We propose knowledge truncation to alleviate incompatible knowledge transfer, and realize it with a lightweight filter-pruning based method. </li>
-					</ul>
-					<b>- 3: </b>
-					Schematic diagram of the proposed Removing In-Compatible Knowledge (RICK): 
-					We measure the importance of each filter during adaptation, periodically (e.g., every 50 iterations). 
-					We zero out the filters with least importance. The same operations are applied to discriminator. Similar to state-of-the-art knowledge preservation methods, we also preserve the filters with highest importance, and fine-tuning the others.
-				</td>
-			</tr>
-		</table>
-	</center>
-    <table align=center width=850px>
-        <tr>
-            <td width=260px>
-                <center>
-                    <img class="round" style="width:880px" src="./resources/method.jpg"/>
-                </center>
-            </td>
-        </tr>
-    </table>
-	<hr>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
 
-	<table align=center width=850px>
-		<center><h1>Abstract</h1></center>
-		<tr>
-			<td>
-				<p style="text-align:justify; text-justify:inter-ideograph;">
-                    Few-shot image generation (FSIG) learns to generate diverse and high-fidelity images from a target domain using a few (e.g., 10) reference samples. Existing FSIG methods select, preserve and transfer prior knowledge from a source generator (pretrained on a related domain) to learn the target generator. In this work, we investigate an underexplored issue in FSIG, dubbed as incompatible knowledge transfer, which would significantly degrade the realisticness of synthetic samples. Empirical observations show that the issue stems from the least significant filters from the source generator. To this end, we propose knowledge truncation to mitigate this issue in FSIG, which is a complementary operation to knowledge preservation and is implemented by a lightweight pruning-based method. Extensive experiments show that knowledge truncation is simple and effective, consistently achieving state-of-the-art performance, including challenging setups where the source and target domains are more distant.			</td>
-		</tr>
-	</table>
-	<br>
+  </div>
+</nav>
 
-	<hr>
-	<center><h1>Talk</h1></center>
-	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
-	</p>
 
-	<table align=center width=800px>
-		<br>
-		<tr>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Exploring Incompatible Knowledge Transfer <br> in Few-shot Image Generation </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/yunqing-zhao/">Yunqing Zhao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://duchao0726.github.io/">Chao Du</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://miladabd.github.io/">Milad Abdollahzadeh</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://p2333.github.io/">Tianyu Pang</a><sup>2</sup>,
+			</span><br>
+            <span class="author-block">
+              <a href="https://linmin.me/">Min Lin</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://yanshuicheng.info/">Shuicheng Yan</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/mancheung0407/">Ngai-Man Cheung</a><sup>1</sup>
+            </span>
+            <br>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Singapore University of Technology and Design (SUTD)</span><br>
+            <span class="author-block"><sup>2</sup>Sea AI Lab (SAIL), Singapore</span><br>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Zhao_Exploring_Incompatible_Knowledge_Transfer_in_Few-Shot_Image_Generation_CVPR_2023_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2304.07574"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://cvpr2023.thecvf.com/media/cvpr-2023/Slides/23031_t6s1F8r.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://cvpr2023.thecvf.com/media/PosterPDFs/CVPR%202023/23031.png?t=1685376860.4000738"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Poster</span>
+                  </a>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/yunqing-me/RICK"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2" >Abstract</h2>
+        <div class="content has-text-justified">
+        <p>
+			Few-shot image generation (FSIG) aims to learn to generate new and diverse samples given an extremely limited number of samples from a domain, e.g., 10 training samples. Recent work has addressed the problem using transfer learning approach, leveraging a GAN pretrained on a large-scale source domain dataset and adapting that model to the target domain based on very limited target domain samples. Central to recent FSIG methods are knowledge preserving criteria, which aim to select a subset of source model's knowledge to be preserved into the adapted model. 
+        </p>
+		<p>
+			However, a major limitation of existing methods is that their knowledge preserving criteria consider only source domain/source task, and they fail to consider target domain/adaptation task in selecting source model's knowledge, casting doubt on their suitability for setups of different proximity between source and target domain. Our work makes two contributions. As our first contribution, we re-visit recent FSIG works and their experiments. Our important finding is that, under setups which assumption of close proximity between source and target domains is relaxed, existing state-of-the-art (SOTA) methods which consider only source domain/source task in knowledge preserving perform no better than a baseline fine-tuning method. To address the limitation of existing methods, as our second contribution, we propose adaptation-aware kernel modulation to address general FSIG of different source-target domain proximity. Extensive experimental results show that the proposed method consistently achieves SOTA performance across source/target domains of different proximity, including challenging setups when source and target domains are more apart.
+		</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <!-- <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Visual Effects</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <!-- <div class="column">
+        <h2 class="title is-3">Matting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              As a byproduct of our method, we can also solve the matting problem by ignoring
+              samples that fall outside of a bounding box during rendering.
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/matting.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+    <!--/ Matting. -->
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <!-- <div class="column is-full-width"> -->
+        <!-- <h2 class="title is-3">Animation</h2> -->
+
+        <!-- Interpolating. -->
+        <!-- <h3 class="title is-4">Interpolating states</h3>
+        <div class="content has-text-justified">
+          <p>
+            We can also animate the scene by interpolating the deformation latent codes of two input
+            frames. Use the slider here to linearly interpolate between the left frame and the right
+            frame.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div>
+        <br/> -->
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+            viewpoint such as a stabilized camera by playing back the training deformations.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+        <!--/ Re-rendering. -->
+
+      </div>
+    </div>
+    <!-- / Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Overview of Proposed method</h2>
+
+        <div class="content has-text-justified">
 			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
+				<table align=center width=850px>
+					<tr>
+						<td width=260px>
+							<center>
+								<img class="round" style="width:880px" src="./resources/teaser.jpg"/>
+							</center>
+						</td>
+					</tr>
+				</table>
+				<table align=center width=880px>
+					<tr>
+						<td>
+							<p style="text-align:justify; text-justify:inter-ideograph;">
+							<b> Contributions:</b> <br> <br>
+							<b>1: </b>
+							We consider the problem of FSIG with Transfer Learning using very limited target samples (e.g., 10-shot). <br>
+							<b>2: </b>
+							Our work makes two contributions: 
+							<ul>
+								<li>We explore the incompatible knowledge transfer for FSIG, reveal that SOTA methods fail in handling this issue, investigate the underlying causation, and 
+									disclose the inadequacy of fine-tuning in removal of incompatible knowledge.</li>
+								<li>We propose knowledge truncation to alleviate incompatible knowledge transfer, and realize it with a lightweight filter-pruning based method. </li>
+							</ul>
+							<b>3: </b>
+							Schematic diagram of the proposed Removing In-Compatible Knowledge (RICK): 
+							We measure the importance of each filter during adaptation, periodically (e.g., every 50 iterations). 
+							We zero out the filters with least importance. The same operations are applied to discriminator. Similar to state-of-the-art knowledge preservation methods, we also preserve the filters with highest importance, and fine-tuning the others.
+						</td>
+					</tr>
+				</table>
 			</center>
-		</tr>
-	</table>
-	<hr>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
 
-	<center><h1>Experiment Results</h1></center>
+  </div>
+</section>
 
-	<table align=center width=820px>
-		<center>
-			<tr>
-				<td>
-				</td>
-			</tr>
-		</center>
-	</table>
-	<table align=center width=800px>
-		<tr>
-			<td align=center width=800px>
-				<center>
-					<td><img class="round" style="width:800px" src="./resources/babies_compare.jpg"/></td>
-				</center>
-			</td> 
-		</tr>
-	</table>
-	<table align=center width=800px>
-		<tr>
-			<td align=center width=800px>
-				<center>
-					<td><img class="round" style="width:800px" src="./resources/cats_compare.jpg"/></td>
-				</center>
-			</td>
-		</tr>
-	</table>
-	<table align=center width=850px>
-		<center>
-			<tr>
-				<td>
-					<p style="text-align:justify; text-justify:inter-ideograph;"> Experiment results of FSIG on few-shot target samples. FFHQ is the source domain. 
-                        <b>Left</b>:
-                        10-shot real target samples for adaptation.
-                        <b>Mid</b>: We visualize the generated images using the adapted generator with different methods. Images in each column are from the same noise input. 
-                        It is noticeable that our method while preserving the source knowledge useful for the target domain, 
-                        reliably removes the incompatible source knowledge. 
-                        For example, in SOTA methods,
-                        (<b>Top</b> orange frames) hat, doodle, sunglasses and beard are transferred and lead to generated babies with degraded realism; 
-                        (<b>Bottom</b>  blue frames) hat, glasses, human face texture and artifacts are transferred and lead to generated cats with low realism. 
-                        In contrast, our method can address this issue in different setups.
-                        <b>Right</b>:
-                        Quantitatively, we measure the quality and diversity of generated images via FID and intra-LPIPS.. 
-				</td>
-			</tr>
-		</center>
-	</table>
-	<table align=center width=800px>
-		<br>
-		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/yunqing-me/RICK'>[GitHub]</a>
-			</center>
-		</span>
-	</table>
-	<br>
-	<hr>
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
-		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">Yunqing Zhao et al.<br>
-				<b>Exploring Incompatible Knowledge Transfer
-                    in Few-shot Image Generation</b><br>
-				In <a href="https://cvpr2023.thecvf.com/">CVPR</a>, 2023.<br>
-				(Vancouver, BC, Canada)<br>
-				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				<span style="font-size:4pt"><a href=""><br></a>
-				</span>
-			</td>
-		</tr>
-	</table>
-	<br>
 
-	<table align=center width=600px>
-		<tr>
-			<td><span style="font-size:14pt"><center>
-				<a href="./resources/bibtex.txt">[Bibtex]</a>
-			</center></td>
-		</tr>
-	</table>
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{zhao2023exploring,
+		title={Exploring incompatible knowledge transfer in few-shot image generation},
+		author={Zhao, Yunqing and Du, Chao and Abdollahzadeh, Milad and Pang, Tianyu and Lin, Min and Yan, Shuicheng and Cheung, Ngai-Man},
+		booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+		pages={7380--7391},
+		year={2023}
+	}</code></pre>
+          <div class="content has-text-justified">
+            <p>
+				Meanwhile, we also demonstrate a relevant research for few-shot image generation, via parameter-efficient Adaptation-Aware kernel Modulation (<a href="https://yunqing-me.github.io/AdAM/">AdAM</a>) to fine-tune the pretrained models: </a>
+            </p>
+            <pre><code>@inproceedings{zhao2022fewshot,
+				title={Few-shot Image Generation via Adaptation-Aware Kernel Modulation},
+				author={Yunqing Zhao and Keshigeyan Chandrasegaran and Milad Abdollahzadeh and Ngai-man Cheung},
+				booktitle={Advances in Neural Information Processing Systems},
+				editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+				year={2022},
+				url={https://openreview.net/forum?id=Z5SE9PiAO4t}
+			}</code></pre>
+          </div>
+  </div>
+</section>
 
-	<hr>
-	<br>
 
-	<table align=center width=900px>
-		<tr>
-			<td width=400px>
-				<left>
-					<center><h1>Acknowledgements</h1></center>
-					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
-				</left>
-			</td>
-		</tr>
-	</table>
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This project page is constructed using the wonderful template provided by <a
+            href="https://nerfies.github.io/">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
-<br>
 </body>
 </html>
-
