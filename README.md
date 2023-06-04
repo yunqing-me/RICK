@@ -33,8 +33,6 @@
 </p>
 
 
-Code/Project Page will be actively updated
-
 # Installation:
 - Platform: Linux
 - NVIDIA A100 PCIe 40GB, CuDNN 11.4
@@ -90,6 +88,34 @@ Then, transform to lmdb format for evaluation
 Download the GAN model pretrained on FFHQ from [here](https://drive.google.com/file/d/1TQ_6x74RPQf03mSjtqUijM4MZEMyn7HI/view). Then, save it to `./_pretrained/style_gan_source_ffhq.pt`.
 
 
+# Training and Evaluation
+
+FFHQ -> Babies:
+```
+CUDA_VISIBLE_DEVICES=0 \
+ python _intra_lpips_train_dynamic_update_prune.py \
+ --exp stylegan_lpips_dynamic_prune_ffhq_babies --data_path babies --n_sample_train 10 \
+ --iter 1750 --batch 2 --num_fisher_img 5 \
+ --fisher_freq 50 --warmup_iter 250 --fisher_quantile 40 \ --prune_quantile 0.1 \
+ --ckpt_source style_gan_source_ffhq.pt --source_key ffhq \
+ --store_samples --samples_freq 50 \
+ --eval_in_training --eval_in_training_freq 50 --n_sample_test 5000 --method rick \
+ --wandb --wandb_project_name stylegan_lpips_ours_babies --wandb_run_name tmp
+```
+
+FFHQ -> AFHQ-Cat:
+```
+CUDA_VISIBLE_DEVICES=4 \
+ python _intra_lpips_train_dynamic_update_prune.py.py \
+ --exp stylegan_lpips_dynamic_prune_ffhq-afhq_cat --data_path afhq_cat --n_sample_train 10 \
+ --iter 2250 --batch 2 --num_fisher_img 5 \
+ --fisher_freq 50 --warmup_iter 250 --fisher_quantile 85 --prune_quantile 0.075 \
+ --ckpt_source style_gan_source_ffhq.pt --source_key ffhq \
+ --store_samples --samples_freq 50 \
+ --eval_in_training --eval_in_training_freq 50 --n_sample_test 5000 --method rick \
+ --wandb --wandb_project_name stylegan_lpips_ours_afhq_cat --wandb_run_name tmp
+```
+The training dynamics will be actively updated in `wandb`.
 # Bibtex
 If you find this project useful in your research, please consider citing our paper:
 
