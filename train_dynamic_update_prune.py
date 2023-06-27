@@ -4,7 +4,6 @@ import math
 import random
 import os
 import numpy as np
-# os.environ["CUDA_VISIBLE_DEVICES"]="7"
 import torch
 from torch import nn, autograd, optim
 from torch.nn import functional as F
@@ -663,18 +662,6 @@ def train(args, train_loader, generator, discriminator, g_optim, d_optim, g_ema,
             
             # 3) evaluation in training
             if args.eval_in_training:
-                if "afhq" in args.data_path:
-                    if i <= 1400:
-                        args.eval_in_training_freq = 1000
-                    else:
-                        args.eval_in_training_freq = 50
-                
-                elif "babies" in args.data_path or "metfaces" in args.data_path or "sunglasses" in args.data_path or 'sketches' in args.data_path:
-                    if i <= 700:
-                        args.eval_in_training_freq = 500
-                    else:
-                        args.eval_in_training_freq = 50
-                
                 if (i % args.eval_in_training_freq == 0):
                     with torch.no_grad():
                         # eval metrics
@@ -682,14 +669,25 @@ def train(args, train_loader, generator, discriminator, g_optim, d_optim, g_ema,
                         torch.cuda.empty_cache()
                         if score['fid'] < best_fid:
                             best_fid = score['fid']
+                            torch.save(
+                                {
+                                    "g_ema": g_ema.state_dict(),
+                                    # uncomment the following lines only if you wish to resume training after saving. 
+                                    # Otherwise, saving just the generator is sufficient for evaluations
+
+                                    "g": g_module.state_dict(),
+                                    "d": d_module.state_dict(),
+                                    "g_optim": g_optim.state_dict(),
+                                    "d_optim": d_optim.state_dict(),
+                                },
+                                os.path.join(args.checkpoint_dir, "best.pt"),
+                            )
                             np.savetxt(os.path.join(args.checkpoint_dir, 'best_fid.txt'), score['fid'].reshape(1, -1))
-                        intra_lpips = evaluator.compute_intra_lpips(args=args).cpu().numpy()
                         torch.cuda.empty_cache()
                     if wandb and args.wandb:
                         wandb.log(
                             {  
                                 "FID"    : score['fid'],
-                                "intra-lpips"    : intra_lpips,
                                 "Generator": g_loss_val,
                                 "Discriminator": d_loss_val,
                             }
@@ -774,11 +772,6 @@ if __name__ == "__main__":
     args.sample_dir     = os.path.join('../../_output_style_gan/', args.exp, 'samples')
     args.checkpoint_dir = os.path.join('../../_output_style_gan/', args.exp, 'checkpoints')
 
-    # for intermediate images in calculating intra-lpips
-    args.intra_lpips_path = os.path.join('../../_output_intra_lpips/', args.exp)
-    if not os.path.exists(args.intra_lpips_path):
-        os.makedirs(args.intra_lpips_path, exist_ok=True)
-
     # Create missing directories
     if not os.path.exists(args.output_path):
         os.makedirs(args.output_path, exist_ok=True)
@@ -822,7 +815,8 @@ if __name__ == "__main__":
         train_dataset   = MultiResolutionDataset(data_path_train, transform_train, args.size)
     else:
         train_dataset   = MultiResolutionDataset(data_path_test, transform_train, args.size)
-        few_shot_idx    = np.random.randint(0, train_dataset.length, size=args.n_sample_train)
+        # few_shot_idx    = np.random.randint(0, train_dataset.length, size=args.n_sample_train)
+        few_shot_idx    = np.random.choice(train_dataset.length, size=args.n_sample_train, replace=False)
         np.savetxt(f"./{args.output_path}/{args.n_sample_train}-shot-index.txt", few_shot_idx)
         train_dataset   = data.Subset(train_dataset, indices=few_shot_idx)
         print(f"Few-shot transfer with {few_shot_idx.size}-shot images")
@@ -858,7 +852,7 @@ if __name__ == "__main__":
     
     # save the training script
     import shutil
-    my_file = './_intra_lpips_train_dynamic_update_prune.py'
+    my_file = './train_dynamic_update_prune.py'
     to_file = os.path.join(args.output_path, "./train_script.py")
     shutil.copy(str(my_file), str(to_file))
 
@@ -921,7 +915,7 @@ if __name__ == "__main__":
         lr=args.lr * g_reg_ratio,
         betas=(0 ** g_reg_ratio, 0.99 ** g_reg_ratio),
     )
- 
+
     #                               new version for D
     #
     d_probe_params = []
