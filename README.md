@@ -32,6 +32,7 @@
 </b>
 </p>
 
+![Teaser image](./static/method.jpg)
 
 # Installation:
 - Platform: Linux
