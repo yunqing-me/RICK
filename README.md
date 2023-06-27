@@ -6,7 +6,7 @@
     <a href="https://miladabd.github.io/" target="_blank" style="text-decoration: none;">Milad Abdollahzadeh<sup>1</sup></a>&nbsp;,&nbsp;
     <a href="https://p2333.github.io/" target="_blank" style="text-decoration: none;">Tianyu Pang<sup>2</sup></a></br>
     <a href="https://linmin.me/" target="_blank" style="text-decoration: none;">Min Lin<sup>2</sup></a>&nbsp;,&nbsp;
-    <a href="https://yanshuicheng.ai/" target="_blank" style="text-decoration: none;">Shuicheng Yan<sup>2</sup></a>&nbsp;,&nbsp;
+    <a href="https://scholar.google.com/citations?user=DNuiPHwAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Shuicheng Yan<sup>2</sup></a>&nbsp;,&nbsp;
     <a href="https://sites.google.com/site/mancheung0407/" target="_blank" style="text-decoration: none;">Ngai&#8209;Man Cheung<sup>1</sup></a></br>
 </p>
 <p align='center' style="text-align:center;font-size:1.25em;">
