@@ -224,7 +224,7 @@ def train(args, train_loader, generator, discriminator, g_optim, d_optim, g_ema,
             print("entering evaluation of fisher information...")
             for j in tqdm(range(args.num_fisher_img)): 
                 # 0) load a batch of noise and real image, and compute FIM image by image
-                noise_fisher    = torch.load(f'../../_noise/{str(j).zfill(4)}.pt').cuda()
+                noise_fisher    = torch.load(f'./_noise/{str(j).zfill(4)}.pt').cuda()
                 real_img_fisher = next(train_loader).to(device)
 
                 for fisher_idx in range((noise_fisher.size()[0])):
