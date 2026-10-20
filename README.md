@@ -95,7 +95,7 @@ FFHQ -> Babies:
  python train_dynamic_update_prune.py \
  --exp dynamic_prune_ffhq_babies --data_path babies --n_sample_train 10 \
  --iter 1750 --batch 2 --num_fisher_img 5 \
- --fisher_freq 50 --warmup_iter 250 --fisher_quantile 40 \ --prune_quantile 0.1 \
+ --fisher_freq 50 --warmup_iter 250 --fisher_quantile 40 --prune_quantile 0.1 \
  --ckpt_source style_gan_source_ffhq.pt --source_key ffhq \
  --store_samples --samples_freq 50 \
  --eval_in_training --eval_in_training_freq 50 --n_sample_test 5000 \
@@ -104,7 +104,7 @@ FFHQ -> Babies:
 
 FFHQ -> AFHQ-Cat:
 ```
- python train_dynamic_update_prune.py.py \
+ python train_dynamic_update_prune.py \
  --exp dynamic_prune_ffhq_afhq_cat --data_path afhq_cat --n_sample_train 10 \
  --iter 2250 --batch 2 --num_fisher_img 5 \
  --fisher_freq 50 --warmup_iter 250 --fisher_quantile 85 --prune_quantile 0.075 \
