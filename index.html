@@ -401,14 +401,14 @@
 							Our work makes two contributions: 
 							<ul>
 								<li>We explore the incompatible knowledge transfer for FSIG, reveal that SOTA methods fail in handling this issue, investigate the underlying causation, and 
-									disclose the inadequacy of fine-tuning in removal of incompatible knowledge.</li>
+									disclose the inadequacy of fine-tuning in the removal of incompatible knowledge.</li>
 								<li>We propose knowledge truncation to alleviate incompatible knowledge transfer, and realize it with a lightweight filter-pruning based method. </li>
 							</ul>
 							<b>3: </b>
 							Below is the schematic diagram of the proposed Removing In-Compatible Knowledge (RICK) for FSIG: 
 							We measure the importance of each filter for adaptation, during adaptation, periodically (e.g., every 50 iterations). 
-							We zero out (i.e., "remove") the filters with least importance. The same operations are applied to the discriminator. 
-              Similar to state-of-the-art knowledge preservation methods, we also preserve the filters with highest importance, and fine-tuning the others.
+							We zero out (i.e., "remove") the filters with the lowest importance. The same operations are applied to the discriminator.
+              Similar to state-of-the-art knowledge preservation methods, we also preserve the filters with the highest importance, and fine-tune the others.
 						</td>
 					</tr>
 				</table>
@@ -450,7 +450,7 @@
           <center>
             <tr>
               <td>
-                <p style="text-align:justify; text-justify:inter-ideograph;"> Experiment results of FSIG on few-shot target samples. FFHQ is the source domain. 
+                <p style="text-align:justify; text-justify:inter-ideograph;"> Experimental results of FSIG on few-shot target samples. FFHQ is the source domain.
                               <b>Left</b>:
                               10-shot real target samples for adaptation.
                               <b>Mid</b>: We visualize the generated images using the adapted generator with different methods. Images in each column are from the same noise input. 
@@ -461,7 +461,7 @@
                               (<b>Bottom</b>  blue frames) hat, glasses, human face texture and artifacts are transferred and lead to generated cats with low realism. 
                               In contrast, our method can address this issue in different setups.
                               <b>Right</b>:
-                              Quantitatively, we measure the quality and diversity of generated images via FID and intra-LPIPS.. 
+                              Quantitatively, we measure the quality and diversity of generated images via FID and intra-LPIPS.
               </td>
             </tr>
           </center>
@@ -491,7 +491,7 @@
 	}</code></pre>
           <div class="content has-text-justified">
             <p>
-				Meanwhile, we also demonstrate a relevant research for few-shot image generation, via parameter-efficient Adaptation-Aware kernel Modulation (<a href="https://yunqing-me.github.io/AdAM/">AdAM</a>, NeurIPS-2022) to fine-tune the pretrained GANs: </a>
+				Meanwhile, we also demonstrate related research on few-shot image generation, via parameter-efficient Adaptation-Aware kernel Modulation (<a href="https://yunqing-me.github.io/AdAM/">AdAM</a>, NeurIPS-2022) to fine-tune the pretrained GANs: </a>
             </p>
             <pre><code>@inproceedings{zhao2022fewshot,
 				title={Few-shot Image Generation via Adaptation-Aware Kernel Modulation},
