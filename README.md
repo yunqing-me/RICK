@@ -115,7 +115,7 @@ FFHQ -> AFHQ-Cat:
 ```
 The training dynamics will be actively updated in `wandb`.
 
-# Bibtex
+# BibTeX
 If you find this project useful in your research, please consider citing our paper:
 
 ```
@@ -127,7 +127,7 @@ If you find this project useful in your research, please consider citing our pap
     year={2023}
 }
 ```
-Meanwhile, we also demonstrate a relevant research for few-shot image generation, via parameter-efficient Adaptation-Aware kernel Modulation ([AdAM](https://github.com/yunqing-me/AdAM)) to fine-tune the pretrained generators:
+Meanwhile, we also demonstrate related research on few-shot image generation, via parameter-efficient Adaptation-Aware kernel Modulation ([AdAM](https://github.com/yunqing-me/AdAM)) to fine-tune the pretrained generators:
 
 ```
 @inproceedings{zhao2022fewshot,
@@ -143,7 +143,7 @@ Meanwhile, we also demonstrate a relevant research for few-shot image generation
 
 We appreciate the wonderful base implementation of StyleGAN-V2 from [@rosinality](https://github.com/rosinality). We thank [@mseitzer](https://github.com/mseitzer/pytorch-fid), [@Ojha](https://github.com/utkarshojha/few-shot-gan-adaptation) and [@richzhang](https://github.com/richzhang/PerceptualSimilarity) for their implementations on FID score and intra-LPIPS.
 
-We also thank for the useful training and evaluation tool used in this work, from [@Miaoyun](https://github.com/MiaoyunZhao/GANmemory_LifelongLearning).
+We also thank [@Miaoyun](https://github.com/MiaoyunZhao/GANmemory_LifelongLearning) for the useful training and evaluation tools used in this work.
 
 
 
